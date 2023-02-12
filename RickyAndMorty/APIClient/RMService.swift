@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+
 
 /// primary API service object to get Rick and Morty data
 final class RMService {
@@ -20,8 +20,12 @@ final class RMService {
     /// send Rick and Morty API Call
     /// - Parameters:
     ///   - request: Request instance
-    ///   - completion: Callback with data or error 
-    public func execute(_ request: RMRequest, completion: @escaping () -> Void) {
-        
-    }
+    ///   - type: the type of object we expect to get back
+    ///   - completion: Callback with data or error
+    public func execute<T: Codable>(
+        _ request: RMRequest,
+        expecting type: T.Type,
+        completion: @escaping (Result<T, Error>) -> Void) {
+            
+        }
 }
