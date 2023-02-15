@@ -23,6 +23,8 @@ struct RMCharacter: Codable {
 }
 
 
+
+
 //{
 //    "id: 1,
 //      "name: "Rick Sanchez",
